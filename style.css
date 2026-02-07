@@ -1,0 +1,64 @@
+:root {
+    --bg-color-day: #f0f4f8;
+    --text-color-day: #1a202c;
+    --accent-color-day: #3182ce;
+
+    --bg-color-night: #1a202c;
+    --text-color-night: #e2e8f0;
+    --accent-color-night: #63b3ed;
+
+    --font-main: 'Inter', sans-serif;
+    --transition-speed: 0.5s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.day {
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 50%, #4facfe 100%);
+    color: #333;
+}
+
+body.night {
+    background: linear-gradient(180deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: #ffffff;
+    
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.clock {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* Adjust clock size for smaller screens */
+@media (max-width: 600px) {
+    .clock {
+        font-size: 4rem;
+    }
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0.6;
+}
